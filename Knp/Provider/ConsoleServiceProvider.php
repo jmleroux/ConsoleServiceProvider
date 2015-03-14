@@ -11,19 +11,19 @@ use Silex\Application;
 
 class ConsoleServiceProvider implements ServiceProviderInterface
 {
-    public function register(Container $app)
+    public function register(Container $container)
     {
-        $app['console'] = function() use ($app) {
-            $application = new ConsoleApplication(
-                $app,
-                $app['console.project_directory'],
-                $app['console.name'],
-                $app['console.version']
+        $container['console'] = function() use ($container) {
+            $containerlication = new ConsoleApplication(
+                $container,
+                $container['console.project_directory'],
+                $container['console.name'],
+                $container['console.version']
             );
 
-            $app['dispatcher']->dispatch(ConsoleEvents::INIT, new ConsoleEvent($application));
+            $container['dispatcher']->dispatch(ConsoleEvents::INIT, new ConsoleEvent($containerlication));
 
-            return $application;
+            return $containerlication;
         };
     }
 }
