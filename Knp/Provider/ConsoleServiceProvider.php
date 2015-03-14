@@ -7,7 +7,6 @@ use Knp\Console\ConsoleEvents;
 use Knp\Console\ConsoleEvent;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Silex\Application;
 
 class ConsoleServiceProvider implements ServiceProviderInterface
 {

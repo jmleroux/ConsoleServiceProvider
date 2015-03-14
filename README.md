@@ -1,6 +1,6 @@
 # ConsoleServiceProvider
 
-Provides a `Symfony\Component\Console` based console for Silex.
+Provides a `Symfony\Component\Console` based console for Silex 2 build with Pimple 3.
 
 ## Install
 

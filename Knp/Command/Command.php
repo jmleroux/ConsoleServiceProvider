@@ -2,12 +2,13 @@
 
 namespace Knp\Command;
 
+use Silex\Application;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
 class Command extends BaseCommand
 {
     /**
-     * @return \Silex\Application
+     * @return Application
      */
     public function getSilexApplication()
     {
